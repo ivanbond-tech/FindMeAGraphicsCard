@@ -1,21 +1,21 @@
 <h2>FindMeAGraphicsCard</h2>
 A simple python script that locates in-stock graphics cards at your closest MicroCenter and notifies you by text.
 Requires a <a href='https://www.twilio.com'>Twilio</a> account (free trial available). Meant to be used in cronjob on a server or your local machine. Let me know if this helped you get a graphics card. Good luck!
-<br>
+<br><br>
 
 <h4>Getting Started</h4>
 
-<code>git clone https://github.com/ivanbond-tech/FindMeAGraphicsCard</code>
+<code>git clone https://github.com/ivanbond-tech/FindMeAGraphicsCard</code><br><br>
 
-<h5>Creating a virtual environment</h5>
+<h4>Creating a virtual environment</h4>
 <code>pip install virtualenv</code><br>
 <code>virtualenv venv</code><br>
-<code>source venv/bin/activate</code><br>
+<code>source venv/bin/activate</code><br><br>
 
-<h5>Getting Twilio credentials</h5>
-<p>Get your <code>ACCOUNT SID</code> and <code>AUTH TOKEN</code> and Twilio phone number from https://www.twilio.com/console</p>
+<h4>Getting Twilio credentials</h4>
+<p>Get your <code>ACCOUNT SID</code> and <code>AUTH TOKEN</code> and Twilio phone number from https://www.twilio.com/console</p><br>
 
-<h5>Add your credentials</h5>
+<h4>Add your credentials</h4>
 
 in <code>main.py</code>:
 <ul>
@@ -26,12 +26,12 @@ in <code>main.py</code>:
   <li>change "sending-phone" to your Twilio account phone number</li>
   <li>change "store-id" to your specific MicroCenter store ID <br>
     <i>This can be found when visiting www.microcenter.com and looking in the url after <code>storeid=XXX</code> after setting your location (should be 3 digits)</i></li>
-</ul>
+</ul><br>
   
-<h5>Running the script</h5>
-<code>python3 main.py</code>
+<h4>Running the script</h4>
+<code>python3 main.py</code><br><br>
 
-<h5>Simple Cronjob Example</h5>
+<h4>Simple Cronjob Example</h4>
 <code>sudo crontab -e</code><br>
 <code>0 8 * * * /home/FindMeAGraphicsCard/main.py</code> 
 <br><br>
