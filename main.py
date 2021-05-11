@@ -10,7 +10,7 @@ import requests
 creds = { 
          "account-SID": "FILL YOUR INFORMATION HERE", 
          "auth-token": "FILL YOUR INFORMATION HERE",
-         "recieving-phone": "FILL YOUR INFORMATION HERE",
+         "receiving-phone": "FILL YOUR INFORMATION HERE",
          "sending-phone": "FILL YOUR INFORMATION HERE",
          "store-id": "FILL YOUR INFORMATION HERE",
          }
@@ -57,11 +57,11 @@ def main():
         count = count + 1
     
     # Sending text message from Twilio API
-    client.messages.create(to=creds["recieving-phone"],
+    client.messages.create(to=creds["receiving-phone"],
             from_=creds["sending-phone"],
             body=f"{message}")
     
-    print(f'Message sent to {creds["recieveing-phone"]} successfully.')
+    print(f'Message sent to {creds["receiving-phone"]} successfully.')
     
     
 if __name__ == '__main__':
